@@ -1,5 +1,30 @@
-# Test Cases
+# Login page description
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+** Fields **
+- Username field 
+- Password field
+- Login button 
+- Forgot Password link
 
+** Information and specifications of the login page **
+The login pages provides access to the application. Users are required to enter a valid username and password combination in order to access the system. The username field is an text field that can hold upto 
+15 characters and should only contain LETTERS. The password field is text field that can hold upto 8 characters only. Both the username and Passowrd fields should NOT allow spaces. Character limits are set in code 
+and the user should not be allowed to enter characters when the limit is reached. Password complexity states that the password should contain at least one caps Letter and one number and should be at least
+4 characters in length. The login button should be disabled by default and only enabled once the username field is populated AND the password field reaches 4 characters in length.
+
+The forgot password link works as follows:
+- User clicks the link and is redirected to a forgot-password page.
+- The forgot-password page will prompt the user to enter a username.
+- if the username is valid, an email with link will be sent to the users email address.
+- when the user opens the email sent and clicks the link, the user should be redirected on a reset-password page and prompted to enter and confirm the new password.
+- if the username is not found, the user should remain on the reset-pasword page and message displayed "username <username> not found".
+
+The Login button when clicked should redict the user to the dashboard page if the username AND password is valid. If the username OR password is invalid, a message should be displayed 
+"Incorrect login username or password, please try again".
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# Test Cases
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ### TC0001 - Valid Login
 ** Pre-conditions **
 1. The user should be on the login page.
@@ -15,7 +40,7 @@
 
 ** Notes **
 - Critical path to all other features of the system / application.
-
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ### TC0002 - Valid Login (using shourtcut keys)
 ** Pre-conditions ** 
 1. The user should be on the login page.
@@ -30,7 +55,7 @@
 
 ** Notes **
 - Functionality already tested in TC0001, this test case is testing the use of keyboard shortcut keys when logging in)
-
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ### TC0003 - Invalid Login
 ** Pre-conditions **
 1. The user should be on the login page.
@@ -47,4 +72,58 @@
 
 ** Notes **
 - Critical to the system or application. Testing that invalid login details prevents user access to the application.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+### TC0004 - Forgot Password Link Successful Reset
+** Pre-conditions **
+1. The user should be on the login page.
+
+** Test Steps **
+1. Click on the forgot password link.
+2. Once the forgot-password page is loaded, click on the username field and enter a valid username.
+3. Click the reset password button.
+4. Open the users email inbox and location the email sent.
+5. Open the email and click the link to rest the users password.
+6. Once the reset-password page is loaded, enter the new password and confirm the new password. ENSURE THAT THE NEW PASSWORD AND CONFIRM PASSWORDS ARE THE SAME, AND BOTH PASSWORDS CONFORM TO THE PASSWORD
+  COMPLEXITY (Contains at least 1 caps letter, 1 number and at least 4 characters long and not more than 8 characters).
+7. Click the save button.
+
+** Expected Results **
+1. After step 3, a message should appear notifying the user to check the users email address for the reset password link.
+2. On step 5, when the user clicks the reset password link the user should be redirected to the reset-password page.
+3. On step 7, when the user clicks the save button a message should be displayed stating that the users password has been updated successfully.
+
+** Notes **
+- Critical test case testing that users are able to successfully reset passwords if forgotten as this can prevent user access to the application. 
+- This test cases also tests that only valid users with access to their email address are able to reset passwords.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+### TC0005 - Forgot Password Link Failed Reset
+** Pre-conditions **
+1. The user should be on the login page.
+
+** Test Steps **
+1. Click on the forgot password link.
+2. Once the forgot-password page is loaded, click on the username field and enter an invalid username.
+3. Click the reset password button.
+4. Now click on the username field and enter a valid username.
+5. Click the reset password button.
+6. Open the users email inbox and location the email sent.
+7. Open the email and click the link to rest the users password.
+8. Once the reset-password page is loaded, enter the new password as "ABCD" and confirm the new password as "ABCD".
+9. Click the save button.
+10. Now enter the new password as "Admin123" and confirm the new password as "Admin456".
+11. Click the save button.
+12. Now enter the new password as "ad" and confirm the new password as "ad".
+13. Click the save button.
+
+** Expected Results **
+1. Confirm that on step 3, when the reset button is clicked a message is displayed stating "Username not found".
+2. Confirm that on step 9, when the save button is clicked a message is displayed stating "New password should contain at least 1 character, 1 number, be at least 4 charcters long and not be longer than 8 characters".
+3. Confirm that on step 11, when the save button is clicked a message is displayed stating "New password and confirm passwords do not Match"
+4. Confirm that on step 13, when the save button is clicked a message is displayed stating "New password should contain at least 1 character, 1 number, be at least 4 charcters long and not be longer than 8 characters".
+
+** Notes **
+- Critical test case testing that invalid users are prevented from resetting passwords.
+- This test case also tests the when resetting passwords the new passwords still meet passowrd requirements.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 
