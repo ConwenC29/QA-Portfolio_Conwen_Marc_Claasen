@@ -12,10 +12,11 @@ The login page provides access to the application. Users are required to enter a
 
 ** THE LOGIN PAGE **
 The login-page will consist of the following attributes:
-- Username: textbox not accept inputs longer than 15 characters. (See USERNAME REQUIREMENRS section for full details)
-- Password: textbox that accepts letters, numbers and special characters AND not accept inputs longer than 8 characters. (See PASSWORD REQUIREMENRS section for full details)
+- Username: textbox that does not accept inputs longer than 15 characters. (See USERNAME REQUIREMENTS section for full details)
+- Password: textbox that accepts letters, numbers and special characters and does not accept inputs longer than 8 characters. (See PASSWORD REQUIREMENTS section for full details)
 - Forgot_Password link: when this link is clicked the user will be redirected to a forgot-password page which will be described in the FORGOT PASSWORD PAGE section below.
-- Login button: this button should by default be disabled and will only be enabled when a username is entered AND password field contains at least 4 characters, No validation done here.
+- Login button: this button should by default be disabled and will only be enabled when a username is entered AND password field contains at least 4 characters, No field-level validation is performed 
+  for enabling the login button.
 
 ** USERNAME REQUIREMENTS **
 Username may contain:
@@ -23,7 +24,6 @@ Username may contain:
 - Underscores (_).
 - Must not contain spaces or other special characters.
 - May not be greater than 15 characters.
-- May not contain spaces.
 
 ** PASSWORD REQUIREMENTS **
 For a password to be considered valid it should contain the following:
@@ -32,27 +32,31 @@ For a password to be considered valid it should contain the following:
 - Contain at least 1 number.
 - Should not be greater than 8 characters.
 - May not contain spaces.
+- Should be case sensitive.
 
 ** FORGOT PASSWORD PAGE **
 When the user clicks the forgot password link on the login-page, the user should be redirected to the forgot-password page. This page will function as follows:
 - The forgot-password page will prompt the user to enter a username.
-- Then user will click the submit button.
-- if the username is valid, an email with a link will be sent to the users email address AND a message displayed to the user which reads "Password reset email sent, Please check your inbox and click the reset link".
-- when the user opens the email sent and clicks the link, the user should be redirected on a reset-password page and prompted to enter and confirm the new password. (See RESET PASSWORD PAGE section for full details)
-- if the username is NOT found, the user should remain on the forgot-password page and a message is displayed "username not found".
+- The user will then click the submit button.
+- if the username is valid, an email with a link will be sent to the user’s email address AND a message displayed to the user which reads "Password reset email sent, please check your inbox and click the reset link".
+- when the user opens the email sent and clicks the link, the user should be redirected to a reset-password page and prompted to enter and confirm the new password. (See RESET PASSWORD PAGE section for full details)
+- if the username is NOT found, the user should remain on the forgot-password page and a message is displayed "Username not found".
 
 ** RESET PASSWORD PAGE **
 On this page, the user will be prompted to enter the following:
 - New Password: should conform to the PASSWORD REQUIREMENTS.
 - Confirm Password: should match the New Password field.
-- Reset button: when clicked and the new password and confirm password has matched and passed checks updates the users password. A Message is displayed in the center of the screen in green which reads "Password
-                has been updated successfully. You will be redirected to the login page in 5 seconds".
+- Reset button: when clicked and the new password and confirm password has matched and passed checks updates the users password. A Message is displayed in the center of the screen in green which reads "Password has been updated successfully. 
+  You will be redirected to the login page in 5 seconds".
 - After 5 seconds the user should automatically be redirected to the login-page.
 - Reset link is valid for 5 minutes and can only be used once.
 
 ** LOGIN **
-The Login button when clicked should redirect the user to the dashboard page if the username AND password is valid. If the username OR password is invalid, a message should be displayed 
-"Incorrect login username or password, please try again".
+The Login button when clicked should redirect the user to the dashboard page if the username AND password is valid. If the username OR password is invalid, errors should be highlighted as per MESSAGES & ERROR HANDLING 
+section. The message displayed should read "Incorrect username or password, please try again". Once a user is logged in and inactive for 5 minutes, the user should be logged out automatically with a message displayed at the 
+top of the screen that reads "You have been logged out due to inactivity. Please log in again".
+When logging into the application, if the user has entered the incorrect password 3 times, After 3 consecutive failed login attempts, the user will be locked out of the application for 5 minutes. This lockout period count should be reset if
+a login is successful. The lockout is applied per user account.
 
 ** MESSAGES & ERROR HANDLING **
 All error messages will be displayed as follows:
@@ -61,6 +65,7 @@ All error messages will be displayed as follows:
 All other messages will be displayed as follows:
 - Messages will be displayed in the top center of the screen, unless otherwise indicated.
 - Messages indicating successful interactions will be displayed in green.
+- Authentication errors (e.g. incorrect username/password) will be displayed at the top center of the screen.
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # Summary of Test Cases
@@ -231,7 +236,7 @@ All other messages will be displayed as follows:
 10. Click the login button.
 
 ** Expected Results **
-1. After step 3, a message should appear notifying the user to check the users email address for the reset password link.
+1. After step 3, a message should appear notifying the user to check the user’s email address for the reset password link.
 2. On step 5, when the user clicks the reset password link the user should be redirected to the reset-password page.
 3. On step 7, when the user clicks the save button a message should be displayed stating that the users password has been updated successfully and will redirect to the login page with a countdown timer starting at 5 seconds.
 4. On step 10, when the login button is clicked, the user is authenticated and logged into the application successfully.
@@ -288,7 +293,7 @@ All other messages will be displayed as follows:
 1. Click on the forgot password link.
 2. Once the forgot-password page is loaded, click on the username field and enter username as "valid_user".
 3. Click the reset password button.
-4. Open the users email address and locate the email sent.
+4. Open the user’s email address and locate the email sent.
 5. Open the email and click the link to reset the users password.
 6. Once the reset-password page is loaded, enter the new password as "Valid123".
 7. Enter the confirm password as "Valid12"
@@ -321,7 +326,7 @@ All other messages will be displayed as follows:
 1. Click on the forgot password link.
 2. Once the forgot-password page is loaded, click on the username field and enter username as "valid_user".
 3. Click the reset password button.
-4. Open the users email address and locate the email sent.
+4. Open the user’s email address and locate the email sent.
 5. Open the email and click the link to reset the users password.
 6. Once the reset-password page is loaded, enter the new password as "invalid".
 7. Enter the confirm password as "invalid"
