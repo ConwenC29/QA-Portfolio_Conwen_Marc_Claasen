@@ -286,10 +286,9 @@ The Login button when clicked should redict the user to the dashboard page if th
 1. The user should be on the login page.
 
 ** Test Steps **
-1. Click on the forgot password link.
-2. Once the forgot-password page is loaded, click on the username field and enter username as "this_username_i".
+1. Click on the username field and enter username as "this_username_i".
 3. Enter the password as "Valid123".
-4. Click the reset password button.
+4. Click the login button.
 
 ** Expected Results **
 1. Confirm that on step 2 that the user is not allowed to enter more than 15 characters.
@@ -314,10 +313,9 @@ The Login button when clicked should redict the user to the dashboard page if th
 1. The user should be on the login page.
 
 ** Test Steps **
-1. Click on the forgot password link.
-2. Once the forgot-password page is loaded, click on the username field and enter username as "valid_user".
+1. Click on the username field and enter username as "valid_user".
 3. Enter the password as "Valid123".
-4. Click the reset password button.
+4. Click the login button.
 
 ** Expected Results **
 1. Confirm that on step 3 that the user is not allowed to enter more than 8 characters.
