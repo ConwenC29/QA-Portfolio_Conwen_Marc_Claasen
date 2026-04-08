@@ -67,7 +67,7 @@ The Login button when clicked should redict the user to the dashboard page if th
 1. The user should be on the login page.
 
 ** Test Steps **
-1. Click on the username field and enter username as "Valid_user" and then press <TAB> button on the keyboard.
+1. Click on the username field and enter username as "valid_user" and then press <TAB> button on the keyboard.
 2. Enter password as "Valid123" and press the <ENTER> button on the keyboard.
 
 ** Exected Results **
@@ -156,13 +156,13 @@ The Login button when clicked should redict the user to the dashboard page if th
 
 ** Test Steps **
 1. Click on the forgot password link.
-2. Once the forgot-password page is loaded, click on the username field and enter username as "vaild_user".
+2. Once the forgot-password page is loaded, click on the username field and enter username as "valid_user".
 3. Click the reset password button.
 4. Open the users email inbox and location the email sent.
 5. Open the email and click the link to rest the users password.
 6. Once the reset-password page is loaded, enter the new password as "Valid456" and confirm the new password as "Valid456".
 7. Click the save button.
-8. Click the username field and enter the username as "vaild_user".
+8. Click the username field and enter the username as "valid_user".
 9. Click the password field and enter the password as "Valid456".
 10. Click the login button.
 
@@ -199,16 +199,13 @@ The Login button when clicked should redict the user to the dashboard page if th
 
 ** Expected Results **
 1. Confirm that on step 3, when the reset button is clicked a message is displayed at the top center of the screen in red. The message should read "Username not found".
-2. User should be authenticated successfully.
-3. User should be logged in successfully.
-4. User session should not be verified.
+2. User should remain on the reset-password page.
 
 **Postconditions:**
 1. User remains on the reset-password page.
 
 ** Notes **
 - Critical test case testing that invalid users are prevented from resetting passwords.
-- This test case also tests the when resetting passwords the new passwords still meet passowrd requirements.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ### TC0007 - Forgot Password Link Failed Reset valid User, mis-matched passwords
 **Priority:** High  
@@ -217,8 +214,8 @@ The Login button when clicked should redict the user to the dashboard page if th
 
 **Test Data:**
 - Username: valid_user
-- New_Password: "Valid123"
-- Confirm_Password: Valid12"
+- New_Password: Valid123
+- Confirm_Password: Valid12
 
 ** Pre-conditions **
 1. The user should be on the login page.
@@ -250,8 +247,8 @@ The Login button when clicked should redict the user to the dashboard page if th
 
 **Test Data:**
 - Username: valid_user
-- New_Password: "invalid"
-- Confirm_Password: invalid"
+- New_Password: invalid
+- Confirm_Password: invalid
 
 ** Pre-conditions **
 1. The user should be on the login page.
@@ -283,7 +280,7 @@ The Login button when clicked should redict the user to the dashboard page if th
 
 **Test Data:**
 - Username: this_username_is_tooo_long
-- New_Password: "Valid123"
+- New_Password: Valid123
 
 ** Pre-conditions **
 1. The user should be on the login page.
@@ -311,7 +308,7 @@ The Login button when clicked should redict the user to the dashboard page if th
 
 **Test Data:**
 - Username: valid_user
-- New_Password: "Valid12345678910"
+- New_Password: Valid12345678910
 
 ** Pre-conditions **
 1. The user should be on the login page.
