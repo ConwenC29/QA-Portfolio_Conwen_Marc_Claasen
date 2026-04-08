@@ -677,3 +677,143 @@ All other messages will be displayed as follows:
 ** Notes **
 - Critical test case testing that all fields are cleared when the page is refreshed.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+### TC0022 - Account Lockout After 3 Failed Attempts
+
+Priority: High
+Severity: Critical
+Type: Security / Negative
+
+Test Data:
+
+Username: valid_user
+Password: wrongpwd
+
+Test Steps:
+
+Enter valid username
+Enter incorrect password
+Click login
+Repeat steps 1–3 three times
+
+Expected Results:
+
+After 3rd failed attempt:
+User is locked out
+Message displayed (top center):
+"Account locked. Please try again after 5 minutes"
+Further login attempts are blocked
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+### TC0023 - Login Attempt During Lockout Period
+
+Priority: High
+Severity: High
+Type: Security / Negative
+
+Precondition:
+
+TC0022 executed
+
+Test Steps:
+
+Attempt login with correct credentials during lockout
+
+Expected Results:
+
+Login is blocked
+Lockout message displayed
+No authentication occurs
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+### TC0024 - Login After Lockout Period Expires
+
+Priority: High
+Severity: High
+Type: Security / Positive
+
+Test Steps:
+
+Wait 5 minutes after lockout
+Enter valid credentials
+Click login
+
+Expected Results:
+
+User successfully logs in
+Lockout counter resets
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+### TC0025 - Session Timeout After Inactivity
+
+Priority: High
+Severity: High
+Type: Security / Functional
+
+Test Steps:
+
+Login successfully
+Remain inactive for 5 minutes
+
+Expected Results:
+
+User is logged out automatically
+Message displayed:
+"You have been logged out due to inactivity. Please log in again"
+User redirected to login page
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+### TC0026 - Case Sensitivity Validation
+
+Priority: Medium
+Severity: High
+Type: Functional / Negative
+
+Test Data:
+
+Username: VALID_USER
+Password: valid123
+
+Test Steps:
+
+Enter credentials with incorrect case
+Click login
+
+Expected Results:
+
+Login fails
+Error message displayed:
+"Incorrect username or password, please try again"
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+### TC0027 - Reset Link Expiry (Time-Based)
+
+Priority: High
+Severity: High
+Type: Security / Negative
+
+Test Steps:
+
+Request password reset
+Wait more than 5 minutes
+Click reset link
+
+Expected Results:
+
+User is not allowed to reset password
+Message displayed:
+"Password reset link has expired"
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+### TC0028 - Login Button Enabled with Invalid Format Inputs
+
+Priority: Medium
+Severity: Medium
+Type: Functional / Edge Case
+
+Test Steps:
+
+Enter username with invalid format (e.g. "user@123")
+Enter password with ≥4 characters
+Observe login button
+
+Expected Results:
+
+Login button becomes enabled
+On click:
+Field validation errors displayed
+Fields highlighted in red
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
