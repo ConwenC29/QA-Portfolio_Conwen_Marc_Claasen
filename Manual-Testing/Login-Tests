@@ -7,19 +7,19 @@
 - Forgot Password link
 
 ** Information and specifications of the login page **
-The login pages provides access to the application. Users are required to enter a valid username and password combination in order to access the system. The username field is an text field that can hold upto 
-15 characters and should only contain LETTERS. The password field is text field that can hold upto 8 characters only. Both the username and Passowrd fields should NOT allow spaces. Character limits are set in code 
-and the user should not be allowed to enter characters when the limit is reached. Password complexity states that the password should contain at least one caps Letter and one number and should be at least
+The login page provides access to the application. Users are required to enter a valid username and password combination in order to access the system. The username field is a text field that can hold up to 
+15 characters and should only contain LETTERS. The password field is a text field that can hold up to 8 characters only. Both the username and password fields should NOT allow spaces. Character limits are set in code 
+and the user should not be allowed to enter characters when the limit is reached. Password complexity states that the password should contain at least one uppercase letter and one number and should be at least
 4 characters in length. The login button should be disabled by default and only enabled once the username field is populated AND the password field reaches 4 characters in length.
 
 The forgot password link works as follows:
 - User clicks the link and is redirected to a forgot-password page.
 - The forgot-password page will prompt the user to enter a username.
-- if the username is valid, an email with link will be sent to the users email address.
+- if the username is valid, an email with a link will be sent to the users email address.
 - when the user opens the email sent and clicks the link, the user should be redirected on a reset-password page and prompted to enter and confirm the new password.
-- if the username is not found, the user should remain on the reset-pasword page and message displayed "username <username> not found".
+- if the username is not found, the user should remain on the reset-password page and a message is displayed "username <username> not found".
 
-The Login button when clicked should redict the user to the dashboard page if the username AND password is valid. If the username OR password is invalid, a message should be displayed 
+The Login button when clicked should redirect the user to the dashboard page if the username AND password is valid. If the username OR password is invalid, a message should be displayed 
 "Incorrect login username or password, please try again".
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -70,7 +70,7 @@ The Login button when clicked should redict the user to the dashboard page if th
 1. Click on the username field and enter username as "valid_user" and then press <TAB> button on the keyboard.
 2. Enter password as "Valid123" and press the <ENTER> button on the keyboard.
 
-** Exected Results **
+** Expected Results **
 1. User should be authenticated successfully.
 2. User session should be verified.
 3. User should be logged in successfully.
@@ -80,7 +80,7 @@ The Login button when clicked should redict the user to the dashboard page if th
 1. User remains logged into the system.
 
 ** Notes **
-- Functionality already tested in TC0001, this test case is testing the use of keyboard shortcut keys when logging in)
+- Functionality already tested in TC0001, this test case is testing the use of keyboard shortcut keys when logging in.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ### TC0003 - Invalid Login with Incorrect Username
 **Priority:** High  
@@ -143,7 +143,7 @@ The Login button when clicked should redict the user to the dashboard page if th
 ### TC0005 - Forgot Password Link Successful Reset
 **Priority:** High  
 **Severity:** Critical 
-**Type:** Functional / Postive 
+**Type:** Functional / Positive 
 
 **Test Data:**
 - Username: valid_user
@@ -158,8 +158,8 @@ The Login button when clicked should redict the user to the dashboard page if th
 1. Click on the forgot password link.
 2. Once the forgot-password page is loaded, click on the username field and enter username as "valid_user".
 3. Click the reset password button.
-4. Open the users email inbox and location the email sent.
-5. Open the email and click the link to rest the users password.
+4. Open the users email inbox and locate the email sent.
+5. Open the email and reset the user’s password.
 6. Once the reset-password page is loaded, enter the new password as "Valid456" and confirm the new password as "Valid456".
 7. Click the save button.
 8. Click the username field and enter the username as "valid_user".
@@ -265,7 +265,7 @@ The Login button when clicked should redict the user to the dashboard page if th
 
 ** Expected Results **
 1. Confirm that on step 3, when the reset button is clicked a message is displayed in green at the top center of the screen. The message should read "Email has been sent to users email to reset password".
-2. Confirm that on step 8, when the save button is clicked a message is displayed in red at the top center of the screen. The message should read "Passwords do not meet minimum requirements. Password should contain at least 1 Caps letter, 1 number, be at least 4 characters long and not longer than 8 characters".
+2. Confirm that on step 8, when the save button is clicked a message is displayed in red at the top center of the screen. The message should read "Passwords do not meet minimum requirements. Password should contain at least 1 uppercase letter, 1 number, be at least 4 characters long and not longer than 8 characters".
 
 **Postconditions:**
 1. User remains on the forgot-password page.
@@ -287,12 +287,12 @@ The Login button when clicked should redict the user to the dashboard page if th
 
 ** Test Steps **
 1. Click on the username field and enter username as "this_username_i".
-3. Enter the password as "Valid123".
-4. Click the login button.
+2. Enter the password as "Valid123".
+3. Click the login button.
 
 ** Expected Results **
 1. Confirm that on step 2 that the user is not allowed to enter more than 15 characters.
-2. Confirm that on step 4, when the save button is clicked a message is displayed in red at the top center of the screen. The message should read "Incorrect login username or password, please try again".
+2. Confirm that on step 3, when the login button is clicked a message is displayed in red at the top center of the screen. The message should read "Incorrect login username or password, please try again".
 
 **Postconditions:**
 1. User remains on the login page.
@@ -314,12 +314,12 @@ The Login button when clicked should redict the user to the dashboard page if th
 
 ** Test Steps **
 1. Click on the username field and enter username as "valid_user".
-3. Enter the password as "Valid123".
-4. Click the login button.
+2. Enter the password as "Valid123".
+3. Click the login button.
 
 ** Expected Results **
-1. Confirm that on step 3 that the user is not allowed to enter more than 8 characters.
-2. Confirm that on step 4, when the save button is clicked a message is displayed in red at the top center of the screen. The message should read "Incorrect login username or password, please try again".
+1. Confirm that on step 2 that the user is not allowed to enter more than 8 characters.
+2. Confirm that on step 3, when the login button is clicked a message is displayed in red at the top center of the screen. The message should read "Incorrect login username or password, please try again".
 
 **Postconditions:**
 1. User remains on the login page.
