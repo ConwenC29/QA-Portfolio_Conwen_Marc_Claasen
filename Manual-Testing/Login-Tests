@@ -1,26 +1,66 @@
-# Login page description
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-** Fields **
-- Username field 
-- Password field
-- Login button 
-- Forgot Password link
+# Title: Login Test Cases
+# Description: The below file will describe login functionality to a web application and showcase how the login functionality will be tested. I will list the test cases in summary (also known as test scenario's) and
+               then in detail show the test execution steps which will be followed in the Test Cases section. 
+# Author: Conwen Claasen
+# Date: 03 April 2026
+# Version: 0.1
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# Login Page Description and Functional Specifications
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+The login page provides access to the application. Users are required to enter a valid username and password combination in order to access the system. 
 
-** Information and specifications of the login page **
-The login page provides access to the application. Users are required to enter a valid username and password combination in order to access the system. The username field is a text field that can hold up to 
-15 characters and should only contain LETTERS. The password field is a text field that can hold up to 8 characters only. Both the username and password fields should NOT allow spaces. Character limits are set in code 
-and the user should not be allowed to enter characters when the limit is reached. Password complexity states that the password should contain at least one uppercase letter and one number and should be at least
-4 characters in length. The login button should be disabled by default and only enabled once the username field is populated AND the password field reaches 4 characters in length.
+** THE LOGIN PAGE **
+The login-page will consist of the following attributes:
+- Username: textbox not accept inputs longer than 15 characters. (See USERNAME REQUIREMENRS section for full details)
+- Password: textbox that accepts letters, numbers and special characters AND not accept inputs longer than 8 characters. (See PASSWORD REQUIREMENRS section for full details)
+- Forgot_Password link: when this link is clicked the user will be redirected to a forgot-password page which will be described in the FORGOT PASSWORD PAGE section below.
+- Login button: this button should by default be disabled and will only be enabled when a username is entered AND password field contains at least 4 characters, No validation done here.
 
-The forgot password link works as follows:
-- User clicks the link and is redirected to a forgot-password page.
+** USERNAME REQUIREMENTS **
+Username may contain:
+- Letters (A–Z, a–z).
+- Underscores (_).
+- Must not contain spaces or other special characters.
+- May not be greater than 15 characters.
+- May not contain spaces.
+
+** PASSWORD REQUIREMENTS **
+For a password to be considered valid it should contain the following:
+- Minimum of 4 characters.
+- Contain at least 1 uppercase letter.
+- Contain at least 1 number.
+- Should not be greater than 8 characters.
+- May not contain spaces.
+
+** FORGOT PASSWORD PAGE **
+When the user clicks the forgot password link on the login-page, the user should be redirected to the forgot-password page. This page will function as follows:
 - The forgot-password page will prompt the user to enter a username.
-- if the username is valid, an email with a link will be sent to the users email address.
-- when the user opens the email sent and clicks the link, the user should be redirected on a reset-password page and prompted to enter and confirm the new password.
-- if the username is not found, the user should remain on the reset-password page and a message is displayed "username <username> not found".
+- Then user will click the submit button.
+- if the username is valid, an email with a link will be sent to the users email address AND a message displayed to the user which reads "Password reset email sent, Please check your inbox and click the reset link".
+- when the user opens the email sent and clicks the link, the user should be redirected on a reset-password page and prompted to enter and confirm the new password. (See RESET PASSWORD PAGE section for full details)
+- if the username is NOT found, the user should remain on the forgot-password page and a message is displayed "username not found".
 
+** RESET PASSWORD PAGE **
+On this page, the user will be prompted to enter the following:
+- New Password: should conform to the PASSWORD REQUIREMENTS.
+- Confirm Password: should match the New Password field.
+- Reset button: when clicked and the new password and confirm password has matched and passed checks updates the users password. A Message is displayed in the center of the screen in green which reads "Password
+                has been updated successfully. You will be redirected to the login page in 5 seconds".
+- After 5 seconds the user should automatically be redirected to the login-page.
+- Reset link is valid for 5 minutes and can only be used once.
+
+** LOGIN **
 The Login button when clicked should redirect the user to the dashboard page if the username AND password is valid. If the username OR password is invalid, a message should be displayed 
 "Incorrect login username or password, please try again".
+
+** MESSAGES & ERROR HANDLING **
+All error messages will be displayed as follows:
+- The field containing the error will be highlighted in red.
+- The error messages will be displayed below the field in red.
+All other messages will be displayed as follows:
+- Messages will be displayed in the top center of the screen, unless otherwise indicated.
+- Messages indicating successful interactions will be displayed in green.
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # Summary of Test Cases
