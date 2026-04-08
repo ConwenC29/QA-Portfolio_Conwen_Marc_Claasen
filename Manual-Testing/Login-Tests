@@ -23,6 +23,30 @@ The Login button when clicked should redirect the user to the dashboard page if 
 "Incorrect login username or password, please try again".
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# Summary of Test Cases
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+1. TC0001 - Valid Login
+2. TC0002 - Valid Login (using shortcut keys)
+3. TC0003 - Invalid Login with Incorrect Username
+4. TC0004 - Invalid Login with Incorrect Password
+5. TC0005 - Forgot Password Link Successful Reset
+6. TC0006 - Forgot Password Link Failed Reset Invalid User
+7. TC0007 - Forgot Password Link Failed Reset valid User, mis-matched passwords
+8. TC0008 - Forgot Password Link Failed Reset valid User, password does not meet requirements
+9. TC0009 - Username too long
+10. TC0010 - Password too long
+11. TC0011 - Username with Spaces
+12. TC0012 - Password with Spaces
+13. TC0013 - Username with Numbers
+14. TC0014 - Username with Special Characters
+15. TC0015 - Password Minimum Length (3 chars)
+16. TC0016 - Password Exactly Minimum Length
+17. TC0017 - Login Button Disabled by Default
+18. TC0018 - Login Button Enabled Conditions
+19. TC0019 - Access Dashboard Without Login
+20. TC0020 - Reuse Reset Link
+21. TC0021 - Page Refresh Behaviour
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # Test Cases
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ### TC0001 - Valid Login
@@ -326,4 +350,285 @@ The Login button when clicked should redirect the user to the dashboard page if 
 
 ** Notes **
 - Critical test case testing that the user cannot enter more than 8 characters into the password field.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+### TC0011 - Username with Spaces
+**Priority:** High  
+**Severity:** Low 
+**Type:** Functional / Negative 
+
+**Test Data:**
+- Username: valid user
+- New_Password: Valid123
+
+** Pre-conditions **
+1. The user should be on the login page.
+
+** Test Steps **
+1. Enter the usermane as "valid user"
+2. Enter the password as "Valid123.
+3. Click the login button.
+
+** Expected Results **
+1. When the login button is clicked a message is displayed in red at the top center of the screen. The message should read "Username field cannot contain spaces".
+
+**Postconditions:**
+1. User remains on the login page.
+
+** Notes **
+- Critical test case testing that the username field cannot contain spaces.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+### TC0012 - Password with Spaces
+**Priority:** High  
+**Severity:** Low 
+**Type:** Functional / Negative 
+
+**Test Data:**
+- Username: valid_user
+- New_Password: Valid 12
+
+** Pre-conditions **
+1. The user should be on the login page.
+
+** Test Steps **
+1. Enter the usermane as "valid_user"
+2. Enter the password as "Valid 12.
+3. Click the login button.
+
+** Expected Results **
+1. When the login button is clicked a message is displayed in red at the top center of the screen. The message should read "Password field cannot contain spaces".
+
+**Postconditions:**
+1. User remains on the login page.
+
+** Notes **
+- Critical test case testing that the password field cannot contain spaces.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+### TC0013 - Username with Numbers
+**Priority:** High  
+**Severity:** Low 
+**Type:** Functional / Negative 
+
+**Test Data:**
+- Username: valid_user123
+- New_Password: Valid123
+
+** Pre-conditions **
+1. The user should be on the login page.
+
+** Test Steps **
+1. Enter the usermane as "valid_user123"
+2. Enter the password as "Valid123.
+3. Click the login button.
+
+** Expected Results **
+1. When the login button is clicked a message is displayed in red at the top center of the screen. The message should read "Username field cannot contain numeric values".
+
+**Postconditions:**
+1. User remains on the login page.
+
+** Notes **
+- Critical test case testing that the username field cannot contain numeric values.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+### TC0014 - Username with Special Characters
+**Priority:** High  
+**Severity:** Low 
+**Type:** Functional / Negative 
+
+**Test Data:**
+- Username: valid_user@12
+- New_Password: Valid1123
+
+** Pre-conditions **
+1. The user should be on the login page.
+
+** Test Steps **
+1. Enter the usermane as "valid_user@12"
+2. Enter the password as "Valid123.
+3. Click the login button.
+
+** Expected Results **
+1. When the login button is clicked a message is displayed in red at the top center of the screen. The message should read "Username field cannot contain Special Characters".
+
+**Postconditions:**
+1. User remains on the login page.
+
+** Notes **
+- Critical test case testing that the username field cannot contain Special Characters.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+### TC0015 - Password Minimum Length (3 chars)
+**Priority:** High  
+**Severity:** High 
+**Type:** Functional / Negative 
+
+**Test Data:**
+- Username: valid_user
+- New_Password: Va1
+
+** Pre-conditions **
+1. The user should be on the login page.
+
+** Test Steps **
+1. Enter the usermane as "valid_user"
+2. Enter the password as "Va1.
+3. Click the login button.
+
+** Expected Results **
+1. When the login button is clicked a message is displayed in red at the top center of the screen. The message should read "Password field should contain at least 4 characters".
+
+**Postconditions:**
+1. User remains on the login page.
+
+** Notes **
+- Critical test case testing that the Password field should contain at least 4 characters.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+### TC0016 - Password Exactly Minimum Length
+**Priority:** High  
+**Severity:** High 
+**Type:** Functional / Positive 
+
+**Test Data:**
+- Username: valid_user2
+- New_Password: Va12
+
+** Pre-conditions **
+1. The user should be on the login page.
+
+** Test Steps **
+1. Enter the usermane as "valid_user2"
+2. Enter the password as "Va12.
+3. Click the login button.
+
+** Expected Results **
+1. User should be authenticated successfully.
+2. User session should be verified.
+3. User should be logged in successfully.
+4. User should be redirected to the users dashboard page.
+
+**Postconditions:**
+1. User remains logged into the system.
+
+** Notes **
+- Critical test case testing that the Password field should containing at least 4 characters is accepted.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+### TC0017 - Login Button Disabled by Default
+**Priority:** High  
+**Severity:** High 
+**Type:** Functional / Positive 
+
+**Test Data:**
+- Username: 
+- New_Password: 
+
+** Pre-conditions **
+1. The user should be on the login page.
+
+** Test Steps **
+1. View the login button.
+
+** Expected Results **
+1. Confirm that the login button is disabled.
+
+**Postconditions:**
+1. User remains on the login page.
+
+** Notes **
+- Critical test case testing that the login button is disabled by defualt.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+### TC0018 - Login Button Enabled Conditions
+**Priority:** High  
+**Severity:** High 
+**Type:** Functional / Positive 
+
+**Test Data:**
+- Username: valid_user
+- New_Password: Valid123
+
+** Pre-conditions **
+1. The user should be on the login page.
+
+** Test Steps **
+1. Enter the username as "valid_user".
+2. Enter the password as "Valid123"
+
+** Expected Results **
+1. Confirm that on step 2, when the password field is populated the login button becomes enabled.
+
+**Postconditions:**
+1. User remains on the login page.
+
+** Notes **
+- Critical test case testing that the login button is enabled once the username field is populated AND the password field exceeds 4 characters.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+### TC0019 - Access Dashboard Without Login
+**Priority:** High  
+**Severity:** High 
+**Type:** Functional / Negative 
+
+**Test Data:**
+- Dashboard_URL: https://myapp/valid_user/dashboard.html
+
+** Pre-conditions **
+1. The user should be on the login page.
+
+** Test Steps **
+1. Enter the Dashboard_URL "https://myapp/valid_user/dashboard.html" into the URL and press enter
+
+** Expected Results **
+1. Confirm that the user is redirected to the login page.
+
+**Postconditions:**
+1. User remains on the login page.
+
+** Notes **
+- Critical test case testing that users cannot access the dashboard without logging in.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+### TC0020 - Reuse Reset Link
+**Priority:** High  
+**Severity:** High 
+**Type:** Functional / Negative 
+
+**Test Data:**
+- None.
+
+** Pre-conditions **
+1. Complete TC0005 - Forgot Password Link Successful Reset.
+
+** Test Steps **
+1. Open the users email and locate the email to reset the password.
+2. Open the email and click the reset link.
+
+** Expected Results **
+1. Confirm that when the user clicks the reset link the user is directed to the reset-password page and a message is displayed in the center of the screen. The message should read "Password reset link has expired".
+
+**Postconditions:**
+1. User remains on the reset-password page.
+
+** Notes **
+- Critical test case testing that users cannot reuse the reset password link.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+### TC00021 - Page Refresh Behaviour
+**Priority:** High  
+**Severity:** Critical  
+**Type:** Functional / Negative 
+
+**Test Data:**
+- Username: valid_user
+- Password: Valid123
+
+** Pre-conditions **
+1. The user should be on the login page.
+
+** Test Steps **
+1. Click on the username field and enter the username as "valid_user".
+2. Click on the password field and enter the password as "Valid123".
+3. Refresh the page.
+
+** Expected Results **
+1. The page should be refreshed and all data must be cleared.
+
+**Postconditions:**
+1. User remains on the login page.
+
+** Notes **
+- Critical test case testing that all fields are cleared when the page is refreshed.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
