@@ -10,7 +10,7 @@
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 The login page provides access to the application. Users are required to enter a valid username and password combination in order to access the system. 
 
-** THE LOGIN PAGE **
+** 1. THE LOGIN PAGE **
 The login-page will consist of the following attributes:
 - Username: textbox that does not accept inputs longer than 15 characters. (See USERNAME REQUIREMENTS section for full details)
 - Password: textbox that accepts letters, numbers and special characters and does not accept inputs longer than 8 characters. (See PASSWORD REQUIREMENTS section for full details)
@@ -18,14 +18,14 @@ The login-page will consist of the following attributes:
 - Login button: this button should by default be disabled and will only be enabled when a username is entered AND password field contains at least 4 characters, No field-level validation is performed 
   for enabling the login button.
 
-** USERNAME REQUIREMENTS **
+** 2. USERNAME REQUIREMENTS **
 Username may contain:
 - Letters (A–Z, a–z).
 - Underscores (_).
 - Must not contain spaces or other special characters.
 - May not be greater than 15 characters.
 
-** PASSWORD REQUIREMENTS **
+** 3. PASSWORD REQUIREMENTS **
 For a password to be considered valid it should contain the following:
 - Minimum of 4 characters.
 - Contain at least 1 uppercase letter.
@@ -34,7 +34,7 @@ For a password to be considered valid it should contain the following:
 - May not contain spaces.
 - Should be case sensitive.
 
-** FORGOT PASSWORD PAGE **
+** 4. FORGOT PASSWORD PAGE **
 When the user clicks the forgot password link on the login-page, the user should be redirected to the forgot-password page. This page will function as follows:
 - The forgot-password page will prompt the user to enter a username.
 - The user will then click the submit button.
@@ -42,7 +42,7 @@ When the user clicks the forgot password link on the login-page, the user should
 - when the user opens the email sent and clicks the link, the user should be redirected to a reset-password page and prompted to enter and confirm the new password. (See RESET PASSWORD PAGE section for full details)
 - if the username is NOT found, the user should remain on the forgot-password page and a message is displayed "Username not found".
 
-** RESET PASSWORD PAGE **
+** 5. RESET PASSWORD PAGE **
 On this page, the user will be prompted to enter the following:
 - New Password: should conform to the PASSWORD REQUIREMENTS.
 - Confirm Password: should match the New Password field.
@@ -51,14 +51,14 @@ On this page, the user will be prompted to enter the following:
 - After 5 seconds the user should automatically be redirected to the login-page.
 - Reset link is valid for 5 minutes and can only be used once.
 
-** LOGIN **
+** 6. LOGIN **
 The Login button when clicked should redirect the user to the dashboard page if the username AND password is valid. If the username OR password is invalid, errors should be highlighted as per MESSAGES & ERROR HANDLING 
 section. The message displayed should read "Incorrect username or password, please try again". Once a user is logged in and inactive for 5 minutes, the user should be logged out automatically with a message displayed at the 
 top of the screen that reads "You have been logged out due to inactivity. Please log in again".
 When logging into the application, if the user has entered the incorrect password 3 times, After 3 consecutive failed login attempts, the user will be locked out of the application for 5 minutes. This lockout period count should be reset if
 a login is successful. The lockout is applied per user account.
 
-** MESSAGES & ERROR HANDLING **
+** 7. MESSAGES & ERROR HANDLING **
 All error messages will be displayed as follows:
 - The field containing the error will be highlighted in red.
 - The error messages will be displayed below the field in red.
@@ -679,141 +679,124 @@ All other messages will be displayed as follows:
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ### TC0022 - Account Lockout After 3 Failed Attempts
 
-Priority: High
-Severity: Critical
-Type: Security / Negative
+**Priority:** High
+**Severity:** Critical
+**Type:** Security / Negative
 
-Test Data:
-
+**Test Data:**
 Username: valid_user
 Password: wrongpwd
 
-Test Steps:
+**Test Steps:**
+1. Enter valid username.
+2. Enter incorrect password.
+3. Click login.
+4. Repeat steps 1–3 three times.
 
-Enter valid username
-Enter incorrect password
-Click login
-Repeat steps 1–3 three times
-
-Expected Results:
-
-After 3rd failed attempt:
-User is locked out
-Message displayed (top center):
-"Account locked. Please try again after 5 minutes"
-Further login attempts are blocked
+**Expected Results:**
+1. After 3rd failed attempt:
+  - User is locked out.
+2. Message displayed (top center):
+  - "Account locked. Please try again after 5 minutes"
+3. Further login attempts are blocked.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ### TC0023 - Login Attempt During Lockout Period
 
-Priority: High
-Severity: High
-Type: Security / Negative
+**Priority:** High
+**Severity:** High
+**Type:** Security / Negative
 
-Precondition:
+**Precondition:**
+1. TC0022 executed
 
-TC0022 executed
+**Test Steps:**
+1. Attempt login with correct credentials during lockout.
 
-Test Steps:
-
-Attempt login with correct credentials during lockout
-
-Expected Results:
-
-Login is blocked
-Lockout message displayed
-No authentication occurs
+**Expected Results:**
+1. Login is blocked.
+2. Lockout message displayed.
+3. No authentication occurs.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ### TC0024 - Login After Lockout Period Expires
 
-Priority: High
-Severity: High
-Type: Security / Positive
+**Priority:** High
+**Severity:** High
+**Type:** Security / Positive
 
-Test Steps:
+**Precondition:**
+1. TC0022 executed
 
-Wait 5 minutes after lockout
-Enter valid credentials
-Click login
+**Test Steps:**
+1. Wait 5 minutes after lockout.
+2. Enter valid credentials.
+3. Click login.
 
-Expected Results:
-
-User successfully logs in
-Lockout counter resets
+**Expected Results:**
+1. User successfully logs in.
+2. Lockout counter resets.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ### TC0025 - Session Timeout After Inactivity
 
-Priority: High
-Severity: High
-Type: Security / Functional
+**Priority:** High
+**Severity:** High
+**Type:** Security / Functional
 
-Test Steps:
+**Test Steps:**
+1. Login successfully.
+2. Remain inactive for 5 minutes.
 
-Login successfully
-Remain inactive for 5 minutes
-
-Expected Results:
-
-User is logged out automatically
-Message displayed:
-"You have been logged out due to inactivity. Please log in again"
-User redirected to login page
+**Expected Results:**
+1.User is logged out automatically.
+  - Message displayed: "You have been logged out due to inactivity. Please log in again"
+2. User redirected to login-page.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ### TC0026 - Case Sensitivity Validation
 
-Priority: Medium
-Severity: High
-Type: Functional / Negative
+**Priority:** Medium
+**Severity:** High
+**Type:** Functional / Negative
 
-Test Data:
+**Test Data:**
+ - Username: VALID_USER
+ - Password: valid123
 
-Username: VALID_USER
-Password: valid123
+**Test Steps:**
+1. Enter credentials with incorrect case.
+2. Click login.
 
-Test Steps:
-
-Enter credentials with incorrect case
-Click login
-
-Expected Results:
-
-Login fails
-Error message displayed:
-"Incorrect username or password, please try again"
+**Expected Results:**
+1. Login fails.
+2. Error message displayed: "Incorrect username or password, please try again".
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ### TC0027 - Reset Link Expiry (Time-Based)
 
-Priority: High
-Severity: High
-Type: Security / Negative
+**Priority:** High
+**Severity:** High
+**Type:** Security / Negative
 
-Test Steps:
+**Test Steps:**
+1. Request password reset.
+2. Wait more than 5 minutes.
+3. Click reset link.
 
-Request password reset
-Wait more than 5 minutes
-Click reset link
-
-Expected Results:
-
-User is not allowed to reset password
-Message displayed:
-"Password reset link has expired"
+**Expected Results:**
+1. User is not allowed to reset password.
+  - Message displayed: "Password reset link has expired".
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ### TC0028 - Login Button Enabled with Invalid Format Inputs
 
-Priority: Medium
-Severity: Medium
-Type: Functional / Edge Case
+**Priority:** Medium
+**Severity:** Medium
+**Type:** Functional / Edge Case
 
-Test Steps:
+**Test Steps:**
+1. Enter username with invalid format (e.g. "user@123").
+2. Enter password with ≥4 characters.
+3. Observe login button.
 
-Enter username with invalid format (e.g. "user@123")
-Enter password with ≥4 characters
-Observe login button
-
-Expected Results:
-
-Login button becomes enabled
-On click:
-Field validation errors displayed
-Fields highlighted in red
+**Expected Results:**
+1. Login button becomes enabled.
+  - On click:
+      -> Field validation errors displayed.
+      -> Fields highlighted in red.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
