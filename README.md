@@ -1,7 +1,5 @@
 # QA-Portfolio_Conwen_Marc_Claasen
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# QA Portfolio – Test Analyst
-
 ## About Me
 
 I am a Software Quality Assurance Analyst with over 12 years of experience in testing across web, desktop, and mobile applications. My experience spans manual testing, API testing, and working closely within Agile environments to ensure high-quality software delivery.
