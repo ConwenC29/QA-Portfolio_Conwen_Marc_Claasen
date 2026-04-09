@@ -91,6 +91,13 @@ All other messages will be displayed as follows:
 19. TC0019 - Access Dashboard Without Login
 20. TC0020 - Reuse Reset Link
 21. TC0021 - Page Refresh Behaviour
+22. TC0022 - Account Lockout After 3 Failed Attempts
+23. TC0023 - Login Attempt During Lockout Period
+24. TC0024 - Login After Lockout Period Expires
+25. TC0025 - Session Timeout After Inactivity
+26. TC0026 - Case Sensitivity Validation
+27. TC0027 - Reset Link Expiry (Time-Based)
+28. TC0028 - Login Button Enabled with Invalid Format Inputs
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # Test Cases
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
