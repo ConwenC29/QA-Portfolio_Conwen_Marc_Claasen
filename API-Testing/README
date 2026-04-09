@@ -1,0 +1,23 @@
+# API Testing Portfolio - Authentication (Reqres)
+
+This project demonstrates API testing for authentication using Reqres.
+
+## Scope
+- Login functionality testing
+- Positive and negative scenarios
+- Input validation
+- Error handling
+- Basic security testing
+
+## Tools Used
+- Postman
+- GitHub
+
+## Test Coverage
+- Valid login
+- Missing fields
+- Invalid credentials
+- Edge cases
+- Injection attempt
+
+This project complements UI test cases by validating backend behavior.
