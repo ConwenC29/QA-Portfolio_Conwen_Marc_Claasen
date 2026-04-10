@@ -1,0 +1,69 @@
+# Test Execution Report – Authentication Module
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+## Project Overview
+This report summarizes the execution of manual test cases for the authentication module, including login and password reset functionality.
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+## Test Scope
+
+* Login functionality
+* Forgot password flow
+* Reset password functionality
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+## Test Execution Summary
+
+| Metric           | Count |
+| ---------------- | ----- |
+| Total Test Cases | 28    |
+| Passed           | 23    |
+| Failed           | 3     |
+| Blocked          | 2     |
+| Not Executed     | 0     |
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+## Execution Status
+
+* Pass Rate: 82%
+* Fail Rate: 11%
+* Blocked: 7%
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+## Defect Summary
+
+| Severity | Count |
+| -------- | ----- |
+| Critical | 1     |
+| High     | 1     |
+| Medium   | 1     |
+| Low      | 0     |
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+## Key Defects Identified
+
+1. Login allows incorrect password after multiple attempts (Lockout not enforced)
+2. Password reset link does not expire after use
+3. Username validation allows special characters under certain conditions
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+## Risks & Observations
+
+* Security risks identified in authentication flow
+* Input validation inconsistencies
+* Password reset process requires stricter validation
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+## Conclusion
+
+The authentication module is partially stable but contains critical issues affecting security and user validation.
+
+It is recommended that:
+
+* Critical defects are resolved before production release
+* Regression testing is performed after fixes
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+## Notes
+
+This report is based on simulated execution to demonstrate test reporting practices and QA analysis.
