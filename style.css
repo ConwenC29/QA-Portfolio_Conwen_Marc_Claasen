@@ -227,63 +227,51 @@ body {
 }
 
 /* CONTACT */
-.contact {
-  padding: 80px 20px;
-  max-width: 900px;
-  margin: 0 auto;
-  text-align: center;
-}
-
-.contact h2 {
-  font-size: 32px;
-  margin-bottom: 40px;
-  color: #38bdf8;
-}
-
-/* GRID */
-.contact-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-}
-
-/* CONTACT CARD */
-/* CONTACT SECTION (LIGHT STYLE) */
-.contact {
-  padding: 80px 20px;
-  text-align: center;
-
-  /* light background to contrast dark theme */
-  background: #f8fafc;
+/* CONTACT BANNER */
+.contact-banner {
+  background: white;
   color: #0f172a;
-}
 
-.contact h2 {
-  font-size: 32px;
-  margin-bottom: 30px;
-  color: #0f172a;
-}
-
-/* LIST STYLE */
-.contact-list {
   display: flex;
-  flex-direction: column;
-  gap: 15px;
+  justify-content: center;
   align-items: center;
+
+  gap: 20px;
+  padding: 25px 15px;
+
+  flex-wrap: wrap; /* important for mobile */
+  border-top: 1px solid #e2e8f0;
 }
 
-.contact-list p {
-  font-size: 18px;
-  margin: 0;
+/* ITEMS */
+.contact-item {
+  font-size: 15px;
 }
 
-/* LINKS */
-.contact-list a {
+.contact-item a {
   color: #0ea5e9;
   text-decoration: none;
   font-weight: 500;
 }
 
-.contact-list a:hover {
+.contact-item a:hover {
   text-decoration: underline;
+}
+
+/* DIVIDER */
+.divider {
+  color: #94a3b8;
+}
+
+/* MOBILE CLEANUP */
+@media (max-width: 600px) {
+  .divider {
+    display: none;
+  }
+
+  .contact-banner {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
 }
