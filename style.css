@@ -227,6 +227,19 @@ body {
 }
 
 /* CONTACT */
+/* CONTACT WRAPPER */
+.contact-wrapper {
+  text-align: center;
+  margin-top: 60px;
+}
+
+/* HEADING */
+.contact-title {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #38bdf8;
+}
+
 /* CONTACT BANNER */
 .contact-banner {
   background: #111c33; /* lighter than page background */
