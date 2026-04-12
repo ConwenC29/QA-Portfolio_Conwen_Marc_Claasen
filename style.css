@@ -290,3 +290,8 @@ body {
     text-align: center;
   }
 }
+
+/* PAGE GENERAL */
+html {
+  scroll-behavior: smooth;
+}
