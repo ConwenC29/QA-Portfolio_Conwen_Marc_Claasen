@@ -248,41 +248,42 @@ body {
 }
 
 /* CONTACT CARD */
-.contact-card {
+/* CONTACT SECTION (LIGHT STYLE) */
+.contact {
+  padding: 80px 20px;
+  text-align: center;
+
+  /* light background to contrast dark theme */
+  background: #f8fafc;
+  color: #0f172a;
+}
+
+.contact h2 {
+  font-size: 32px;
+  margin-bottom: 30px;
+  color: #0f172a;
+}
+
+/* LIST STYLE */
+.contact-list {
   display: flex;
-  align-items: center;
+  flex-direction: column;
   gap: 15px;
-
-  text-decoration: none;
-  color: white;
-
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 12px;
-
-  padding: 20px;
-
-  transition: transform 0.2s ease, background 0.2s ease;
+  align-items: center;
 }
 
-.contact-card:hover {
-  transform: translateY(-5px);
-  background: rgba(56, 189, 248, 0.12);
-}
-
-/* ICON */
-.icon {
-  font-size: 28px;
-}
-
-/* TEXT */
-.contact-card h3 {
+.contact-list p {
+  font-size: 18px;
   margin: 0;
-  font-size: 16px;
 }
 
-.contact-card p {
-  margin: 5px 0 0;
-  font-size: 14px;
-  color: #cbd5e1;
+/* LINKS */
+.contact-list a {
+  color: #0ea5e9;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.contact-list a:hover {
+  text-decoration: underline;
 }
