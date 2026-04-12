@@ -229,8 +229,8 @@ body {
 /* CONTACT */
 /* CONTACT BANNER */
 .contact-banner {
-  background: white;
-  color: #0f172a;
+  background: #111c33; /* lighter than page background */
+  color: white;
 
   display: flex;
   justify-content: center;
@@ -239,31 +239,33 @@ body {
   gap: 20px;
   padding: 25px 15px;
 
-  flex-wrap: wrap; /* important for mobile */
-  border-top: 1px solid #e2e8f0;
+  flex-wrap: wrap;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-/* ITEMS */
+/* CONTACT ITEMS */
 .contact-item {
-  font-size: 15px;
+  font-size: 25px;
+  color: white;
 }
 
 .contact-item a {
-  color: #0ea5e9;
+  color: white;
   text-decoration: none;
   font-weight: 500;
 }
 
 .contact-item a:hover {
+  color: #38bdf8;
   text-decoration: underline;
 }
 
 /* DIVIDER */
 .divider {
-  color: #94a3b8;
+  color: rgba(255, 255, 255, 0.4);
 }
 
-/* MOBILE CLEANUP */
+/* MOBILE */
 @media (max-width: 600px) {
   .divider {
     display: none;
