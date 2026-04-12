@@ -1,145 +1,48 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Conwen Claasen | QA Portfolio</title>
-
-```
-<!-- ✅ CSS FILE LINK (THIS IS THE IMPORTANT LINE) -->
-<link rel="stylesheet" href="style.css">
-
-<!-- Optional Google Font -->
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-```
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QA Dashboard Portfolio</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<!-- ===== NAVBAR ===== -->
+  <div class="dashboard">
 
-<header>
-    <nav class="navbar">
-        <h2 class="logo">Conwen</h2>
-        <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
-</header>
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <h2 class="logo">QA Hub</h2>
 
-<!-- ===== HERO SECTION ===== -->
+      <nav>
+        <a href="#">🏠 Home</a>
+        <a href="#">📁 Projects</a>
+        <a href="#">🔌 API Testing</a>
+        <a href="#">🧪 Automation</a>
+        <a href="#">🗄️ SQL</a>
+        <a href="#">📊 Reports</a>
+      </nav>
+    </aside>
 
-<section class="hero">
-    <h1>Hi, I'm Conwen Claasen</h1>
-    <p>Software QA Analyst | Manual & Automation Testing</p>
-    <a href="#projects" class="btn">View My Work</a>
-</section>
+    <!-- MAIN CONTENT -->
+    <main class="main">
 
-<!-- ===== ABOUT ===== -->
+      <header class="topbar">
+        <h1>Welcome back, QA Analyst 👋</h1>
+        <p>Your testing dashboard overview</p>
+      </header>
 
-<section id="about" class="section">
-    <h2>About Me</h2>
-    <p>
-        I am a Software QA Analyst with over 12 years of experience in testing web, desktop, and mobile applications.
-        I specialize in manual testing, API testing, and automation using Playwright.
-    </p>
-</section>
+      <section class="cards">
+        <div class="card">✔ Test Cases Written</div>
+        <div class="card">🐞 Bugs Logged</div>
+        <div class="card">🤖 Automation Scripts</div>
+        <div class="card">📡 API Tests</div>
+      </section>
 
-<!-- ===== SKILLS ===== -->
+    </main>
 
-<section id="skills" class="section">
-    <h2>Skills</h2>
-
-```
-<div class="skills-grid">
-    <div class="card">
-        <h3>Manual Testing</h3>
-        <p>Test Cases, UAT, Exploratory Testing</p>
-    </div>
-
-    <div class="card">
-        <h3>Automation</h3>
-        <p>Playwright (Python), Selenium</p>
-    </div>
-
-    <div class="card">
-        <h3>API Testing</h3>
-        <p>Postman, REST APIs</p>
-    </div>
-
-    <div class="card">
-        <h3>Tools</h3>
-        <p>Jira, SQL Server, GitHub</p>
-    </div>
-</div>
-```
-
-</section>
-
-<!-- ===== PROJECTS ===== -->
-
-<section id="projects" class="section">
-    <h2>Projects</h2>
-
-```
-<div class="projects-grid">
-
-    <div class="card">
-        <h3>SauceDemo Automation Framework</h3>
-        <p>Automation testing using Playwright with Python.</p>
-        <a href="https://github.com/ConwenC29/QA-Portfolio_Conwen_Marc_Claasen/tree/main/Automation-Testing" target="_blank">
-            View Repo
-        </a>
-    </div>
-
-    <div class="card">
-        <h3>API Testing Collection</h3>
-        <p>Postman collection for API validation.</p>
-        <a href="https://github.com/ConwenC29/QA-Portfolio_Conwen_Marc_Claasen/tree/main/API-Testing" target="_blank">
-            View Repo
-        </a>
-    </div>
-
-    <div class="card">
-        <h3>Manual Testing</h3>
-        <p>Test cases and manual testing scenarios.</p>
-        <a href="https://github.com/yourusername/manual-testing" target="_blank">
-            View Repo
-        </a>
-    </div>
-
-    <div class="card">
-        <h3>Reporting</h3>
-        <p>Bug reports and test status reports.</p>
-        <a href="https://github.com/ConwenC29/QA-Portfolio_Conwen_Marc_Claasen/tree/main/Reporting" target="_blank">
-            View Repo
-        </a>
-    </div>
-
-</div>
-```
-
-</section>
-
-<!-- ===== CONTACT ===== -->
-
-<section id="contact" class="section">
-    <h2>Contact</h2>
-    <p>Email: your@email.com</p>
-    <p>LinkedIn: https://linkedin.com/in/yourprofile</p>
-    <p>GitHub: https://github.com/ConwenC29</p>
-</section>
-
-<!-- ===== FOOTER ===== -->
-
-<footer>
-    <p>© 2026 Conwen Claasen | QA Portfolio</p>
-</footer>
+  </div>
 
 </body>
 </html>
