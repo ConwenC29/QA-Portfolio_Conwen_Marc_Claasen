@@ -399,6 +399,87 @@ body {
   }
 }
 
+/* TOOLS SECTION */
+/* TOOLS SECTION */
+.tools {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.tools h2 {
+  margin-bottom: 30px;
+  color: #0f172a;
+}
+
+/* GRID */
+.tools-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* TOOL CARD */
+.tool-item {
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  border-radius: 12px;
+
+  padding: 20px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+
+  transition: all 0.2s ease;
+}
+
+/* LOGOS */
+.tool-item img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+/* TOOL NAME */
+.tool-item span {
+  font-size: 14px;
+  color: #334155;
+  font-weight: 600;
+}
+
+/* HOVER EFFECT */
+.tool-item:hover {
+  transform: translateY(-5px);
+  background: rgba(22, 163, 74, 0.12);
+}
+
+/* SKILL BADGE BASE */
+.skill-badge {
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-weight: 600;
+}
+
+/* LEVEL COLORS */
+.skill-badge.expert {
+  background: rgba(22, 163, 74, 0.15);
+  color: #16a34a;
+}
+
+.skill-badge.intermediate {
+  background: rgba(59, 130, 246, 0.15);
+  color: #2563eb;
+}
+
+.skill-badge.beginner {
+  background: rgba(234, 88, 12, 0.15);
+  color: #ea580c;
+}
+
 /* SMOOTH SCROLL */
 html {
   scroll-behavior: smooth;
