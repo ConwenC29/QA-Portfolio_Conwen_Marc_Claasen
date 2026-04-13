@@ -201,7 +201,7 @@ body {
 
 .skill-card:hover {
   transform: translateY(-5px);
-  background: rgba(14, 165, 233, 0.1);
+  background: rgba(9, 115, 1, 0.1);
 }
 
 .skill-card h3 {
@@ -254,7 +254,7 @@ body {
 
 .project-card:hover {
   transform: translateY(-5px);
-  background: rgba(14, 165, 233, 0.1);
+  background: rgba(9, 115, 1, 0.1);
 }
 
 .project-card h3 {
