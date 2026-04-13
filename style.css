@@ -10,6 +10,18 @@ body {
   color: white;
 }
 
+/* PAGE BACKGROUND */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+
+  /* BACKGROUND IMAGE */
+  background: url("Images/desk-with-objects.jpg") no-repeat center center fixed;
+  background-size: cover;
+
+  color: white;
+}
+
 /* NAVBAR */
 .navbar {
   display: flex;
