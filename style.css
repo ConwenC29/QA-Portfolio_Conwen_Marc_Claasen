@@ -220,6 +220,10 @@ body {
   background: rgba(9, 115, 1, 0.1);
 }
 
+.skill-card:hover p {
+  color: #ffffff;
+}
+
 .skill-card h3 {
   margin-bottom: 10px;
   color: #097301;
@@ -271,6 +275,10 @@ body {
 .project-card:hover {
   transform: translateY(-5px);
   background: rgba(9, 115, 1, 0.1);
+}
+
+.project-card:hover p {
+  color: #ffffff;
 }
 
 .project-card h3 {
