@@ -84,19 +84,19 @@ body {
 .hero h1 {
   font-size: 48px;
   margin-bottom: 10px;
-  color: #0f172a;
+  color: #FFFFFF;
 }
 
 .hero h2 {
   font-size: 20px;
-  color: #0ea5e9;
+  color: #0A5202;
   margin-bottom: 20px;
 }
 
 .hero p {
   max-width: 600px;
   margin-bottom: 30px;
-  color: #334155;
+  color: #FFFFFF;
 }
 
 /* HERO IMAGE */
