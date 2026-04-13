@@ -35,7 +35,7 @@ body {
 .logo-text {
   font-size: 18px;
   font-weight: bold;
-  color: #0ea5e9;
+  color: #097301;
 }
 
 .nav-links {
@@ -51,7 +51,7 @@ body {
 }
 
 .nav-links a:hover {
-  color: #0ea5e9;
+  color: #097301;
 }
 
 /* PROFILE IMAGE (NAVBAR) */
@@ -156,12 +156,12 @@ body {
 .about h2 {
   font-size: 32px;
   margin-bottom: 20px;
-  color: #0f172a;
+  color: #097301;
 }
 
 .about p {
   margin-bottom: 15px;
-  color: #334155;
+  color: #FFFFFF;
   line-height: 1.6;
   font-size: 16px;
 }
@@ -177,7 +177,7 @@ body {
 .skills h2 {
   font-size: 32px;
   margin-bottom: 40px;
-  color: #0f172a;
+  color: #097301;
 }
 
 /* GRID */
@@ -226,7 +226,7 @@ body {
 .projects h2 {
   font-size: 32px;
   margin-bottom: 40px;
-  color: #0f172a;
+  color: #097301;
 }
 
 /* PROJECT GRID */
@@ -283,7 +283,7 @@ body {
 .contact-title {
   font-size: 32px;
   margin-bottom: 40px;
-  color: #0f172a;
+  color: #097301;
 }
 
 /* CONTACT BANNER */
