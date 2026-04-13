@@ -75,9 +75,9 @@ body {
   padding: 40px 20px;
   margin: 40px;
 
-  background: rgba(255, 255, 255, 0.75);
+  background: rgba(255, 255, 255, 0.4); 
   border-radius: 12px;
-  backdrop-filter: blur(6px);
+  backdrop-filter: blur(4px); 
 }
 
 .hero h1 {
@@ -146,9 +146,9 @@ body {
   margin: 40px auto;
   text-align: center;
 
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.4); 
   border-radius: 12px;
-  backdrop-filter: blur(6px);
+  backdrop-filter: blur(4px);
 }
 
 .about h2 {
