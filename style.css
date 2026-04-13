@@ -318,3 +318,16 @@ html {
   font-weight: bold;
   color: #38bdf8;
 }
+
+/* HERO IMAGE */
+.hero-image {
+  width: 180px;
+  height: 180px;
+  margin-top: 30px;
+
+  border-radius: 50%; /* makes it round */
+  object-fit: cover;
+
+  border: 3px solid #38bdf8; /* matches your theme */
+  box-shadow: 0 0 20px rgba(56, 189, 248, 0.4);
+}
