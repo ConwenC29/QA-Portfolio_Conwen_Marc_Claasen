@@ -140,6 +140,14 @@ body {
   color: #16a34a;
 }
 
+.hero-meta {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px; 
+}
+
 /* BOOK A CALL BUTTON */
 .book-call-btn {
   background: #16a34a;
