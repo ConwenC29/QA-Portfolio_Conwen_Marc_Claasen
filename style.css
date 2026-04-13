@@ -6,7 +6,7 @@
 }
 
 /* PAGE BACKGROUND */
-body {
+/*body {
   margin: 0;
   font-family: Arial, sans-serif;
 
@@ -14,6 +14,21 @@ body {
   background-size: cover;
 
   color: #0f172a; 
+}*/
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+
+  background: url("Images/top-view-desk-dark-concept-with-copy-space.jpg") no-repeat center center fixed;
+  background-size: cover;
+  background: 
+    linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)),
+    url("Images/desk-with-objects.jpg") no-repeat center center fixed;
+
+  background-size: cover;
+
+  color: #0f172a;
 }
 
 /* NAVBAR */
@@ -109,8 +124,8 @@ body {
   border-radius: 50%;
   object-fit: cover;
 
-  border: 3px solid #0ea5e9;
-  box-shadow: 0 0 20px rgba(14, 165, 233, 0.4);
+  border: 3px solid #097301; /* green */
+  box-shadow: 0 0 20px rgba(9, 115, 1, 0.4); /* matching glow */
 }
 
 /* BUTTONS */
