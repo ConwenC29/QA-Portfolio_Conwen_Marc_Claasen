@@ -344,10 +344,11 @@ body {
 .contact-title {
   font-size: 2rem;
   margin-bottom: 10px;
+  color: #097301;
 }
 
 .contact-subtext {
-  color: #94a3b8;
+  color: #ffffff;
   max-width: 600px;
   margin: 0 auto 40px;
   font-size: 0.95rem;
@@ -388,12 +389,12 @@ body {
 .contact-item span {
   font-weight: 600;
   font-size: 0.9rem;
-  color: #FFFFFF;
+  color: #097301;
 }
 
 .contact-item a {
   text-decoration: none;
-  color: #097301;
+  color: #FFFFFF;
   font-size: 0.85rem;
   word-break: break-word;
 }
