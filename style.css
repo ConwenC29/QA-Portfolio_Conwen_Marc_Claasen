@@ -380,6 +380,11 @@ body {
   color: #0ea5e9;
 }
 
+.contact p {
+  color: #FFFFFF;
+  font-size: 1.5rem;
+}
+
 .contact-item span {
   font-weight: 600;
   font-size: 0.9rem;
