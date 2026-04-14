@@ -507,6 +507,12 @@ body {
   margin: 40px auto;
 }
 
+.certificates h2 {
+  font-size: 32px;
+  margin-bottom: 40px;
+  color: #097301;
+}
+
 .cert-container {
   position: relative;
   overflow: hidden;
