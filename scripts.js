@@ -1,4 +1,6 @@
 <script>
+document.addEventListener("DOMContentLoaded", () => {
+
   const slides = document.querySelectorAll(".cert-slide");
   let index = 0;
 
@@ -16,4 +18,6 @@
     index = (index - 1 + slides.length) % slides.length;
     showSlide(index);
   });
+
+});
 </script>
