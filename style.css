@@ -508,6 +508,7 @@ body {
 }
 
 .certificates h2 {
+  position: centered;
   font-size: 32px;
   margin-bottom: 40px;
   color: #097301;
