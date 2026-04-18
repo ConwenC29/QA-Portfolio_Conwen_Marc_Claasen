@@ -1,0 +1,1 @@
+A comprehensive suite of SQL-based data validation tests was developed to ensure data integrity across HR and payroll datasets, covering entity integrity, referential integrity, validation rules, reconciliation, and anomaly detection
